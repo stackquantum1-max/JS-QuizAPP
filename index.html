@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Start Section -->
+  <section class="start-section">
+    <button class="btn-start" data-action="start-quiz">Start Quiz</button>
+  </section>
+
+  <!-- Quiz Section -->
+  <section class="quiz-section hidden" data-quiz="main">
+    
+    <!-- 2.1 Header -->
+    <header class="quiz-header" data-quiz="header">
+      <h1 class="quiz-title" data-quiz="title">Quiz App</h1>
+
+      <!-- Timer -->
+      <div class="timer" data-quiz="timer">
+        <span class="timer-text" data-quiz="timer-text">Time Remaining</span>
+        <span class="timer-count" data-quiz="timer-count">10</span>
+      </div>
+    </header>
+
+    <!-- 2.2 Time Line -->
+    <div class="time-line" data-quiz="time-line">
+      <div class="time-progress" data-quiz="time-progress"></div>
+    </div>
+
+    <!-- 2.3 Question & Options -->
+    <div class="question-section" data-quiz="question-section">
+
+      <!-- Question -->
+      <div class="question-text" data-quiz="question">
+        <!-- Question text injected by JS -->
+      </div>
+
+      <!-- Options -->
+      <div class="options" data-quiz="options">
+        <button class="option" data-option="a"></button>
+        <button class="option" data-option="b"></button>
+        <button class="option" data-option="c"></button>
+      </div>
+    </div>
+
+    <!-- 2.4 Question Number -->
+    <div class="question-number" data-quiz="question-number">
+      1 / 7
+    </div>
+
+    <!-- 2.5 Next Button -->
+    <div class="next-section">
+      <button class="btn-next" data-action="next-question">Next Question</button>
+    </div>
+
+  </section>
+
+  <!-- Score Section -->
+  <section class="score-section hidden" data-quiz="score">
+    
+    <div class="score-header">
+      <span class="score-icon" data-quiz="score-icon">🏁</span>
+      <span class="score-text" data-quiz="score-text">You got X / 7 correct</span>
+    </div>
+
+    <div class="score-buttons">
+      <button class="replay-btn" data-action="replay">Replay</button>
+      <button class="quit-btn" data-action="quit">Quit</button>
+    </div>
+
+  </section>
+
+  <!-- JS scripts -->
+  <script src="js/question.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
