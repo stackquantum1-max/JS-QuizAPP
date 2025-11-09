@@ -15,8 +15,9 @@
 
   <!-- Quiz Section -->
   <section class="quiz-section hidden" data-quiz="main">
-    
-    <!-- 2.1 Header -->
+  <div class="quiz-box">
+
+    <!-- Header -->
     <header class="quiz-header" data-quiz="header">
       <h1 class="quiz-title" data-quiz="title">Quiz App</h1>
 
@@ -27,8 +28,8 @@
       </div>
     </header>
 
-    <!-- 2.2 Time Line -->
-    <div class="time-line" data-quiz="time-line">
+    <!-- Time Line -->
+    <div class="time-line" data-quiz="timeline">
       <div class="time-progress" data-quiz="time-progress"></div>
     </div>
 
@@ -45,19 +46,21 @@
         <button class="option" data-option="a"></button>
         <button class="option" data-option="b"></button>
         <button class="option" data-option="c"></button>
+        <button class="option" data-option="d"></button>
       </div>
     </div>
 
     <!-- 2.4 Question Number -->
+    <div class="question-footer"> 
     <div class="question-number" data-quiz="question-number">
       1 / 7
     </div>
 
     <!-- 2.5 Next Button -->
     <div class="next-section">
-      <button class="btn-next" data-action="next-question">Next Question</button>
+      <div class="btn-next" data-action="next-question">Next Question</div>
     </div>
-
+    </div>
   </section>
 
   <!-- Score Section -->
