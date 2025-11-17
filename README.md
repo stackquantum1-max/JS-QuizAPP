@@ -45,16 +45,6 @@ Click Next Question to proceed.
 At the end, view your score.
 Click Replay to start the quiz again or Quit to reload the page.
 
-quiz-app/
-│
-├─ index.html          # Main HTML file
-├─ style.css           # CSS styling
-├─ js/
-│  ├─ questions.js     # Quiz questions data
-│  ├─ quiz.js          # Quiz logic
-│  └─ main.js          # Event handling and DOM manipulation
-└─ README.md           # Project documentation
-
 Technologies
 
 HTML5
