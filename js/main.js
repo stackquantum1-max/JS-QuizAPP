@@ -1,4 +1,3 @@
-// --- DOM Elements ---
 const startBtn = document.querySelector('[data-start]');
 const quizSection = document.querySelector('[data-quiz]');
 const questionText = document.querySelector('[data-question]');
@@ -12,12 +11,10 @@ const scoreText = document.querySelector('[data-score-text]');
 const replayBtn = document.querySelector('[data-replay]');
 const quitBtn = document.querySelector('[data-quit]');
 
-// --- Quiz State ---
 let counter;
 let counterLine;
-const quiz = new Quiz(questions); // assume questions.js exists
+const quiz = new Quiz(questions);
 
-// --- Start Quiz ---
 startBtn.addEventListener('click', () => {
   document.querySelector('[data-start]').closest('section').classList.add('hidden');
   quizSection.classList.remove('hidden');
@@ -27,7 +24,6 @@ startBtn.addEventListener('click', () => {
   startLine();
 });
 
-// --- Show Question ---
 function showQuestion() {
   const current = quiz.getCurrentQuestion();
   questionText.textContent = current.questionText;
@@ -43,7 +39,6 @@ function showQuestion() {
   }
 }
 
-// --- Option Selected ---
 function optionSelected(btn) {
   clearInterval(counter);
   clearInterval(counterLine);
@@ -67,7 +62,6 @@ function optionSelected(btn) {
   document.querySelectorAll('.option').forEach(o => o.disabled = true);
 }
 
-// --- Next Question ---
 nextBtn.addEventListener('click', () => {
     // Clear previous intervals to avoid duplicates
     clearInterval(counter);
@@ -85,17 +79,14 @@ nextBtn.addEventListener('click', () => {
     }
 });
 
-// --- Show Question Number ---
 function showNumber() {
   questionNumberElem.textContent = `${quiz.questionIndex + 1} / ${quiz.questions.length}`;
 }
 
-// --- Show Score ---
 function showScore() {
   scoreText.textContent = `You got ${quiz.correctAnswers} / ${quiz.questions.length} correct`;
 }
 
-// --- Timer ---
 function startTimer(seconds) {
   let time = seconds;
   timerCount.textContent = time;
@@ -112,7 +103,6 @@ function startTimer(seconds) {
     }, 1000);
 }
 
-// --- Time Line ---
 function startLine() {
   let lineWidth = 0;
   counterLine = setInterval(() => {
@@ -122,7 +112,6 @@ function startLine() {
   }, 20);
 }
 
-// --- Auto Reveal Answer ---
 function autoRevealAnswer() {
   const correct = quiz.getCurrentQuestion().correctAnswer;
   document.querySelectorAll('.option').forEach(o => {
@@ -131,7 +120,6 @@ function autoRevealAnswer() {
   });
 }
 
-// --- Replay Quiz ---
 replayBtn.addEventListener('click', () => {
     scoreSection.classList.add('hidden');
     document.querySelector('.start-section').classList.remove('hidden');
@@ -144,7 +132,6 @@ replayBtn.addEventListener('click', () => {
     optionsContainer.innerHTML = '';
 });
 
-// --- Quit ---
 quitBtn.addEventListener('click', () => {
   window.location.reload();
 });
