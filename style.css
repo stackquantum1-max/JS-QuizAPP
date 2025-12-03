@@ -244,5 +244,5 @@ body {
 
 .option.correct:disabled,
 .option.incorrect:disabled {
-  opacity: 0.7;
+  opacity: 0.6;
 }
