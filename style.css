@@ -146,7 +146,7 @@ body {
 }
 
 .option:hover { background-color: #f3f4f6; border-color: #00b894; }
-.option.selected { background-color: #00b894; color: #fff; border-color: #00b894; }
+.option.selected { background-color: #02a887; color: #fff; border-color: #00b894; }
 
 /* Question Footer */
 .question-footer {
